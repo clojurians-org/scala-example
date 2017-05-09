@@ -1,5 +1,3 @@
-import Dependencies._
-
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
@@ -10,7 +8,6 @@ lazy val root = (project in file(".")).
     resolvers += "Local Maven Repository" at "file:///"+Path.userHome+"/.m2/repository",
     name := "etl-spark",
     libraryDependencies ++= Seq(
-      scalaTest % Test,
       "org.apache.spark" %% "spark-core" % "2.1.0" % "provided",
       "org.apache.spark" %% "spark-sql" % "2.1.0" % "provided",
       "org.apache.spark" %% "spark-mllib" % "2.1.0" % "provided"
